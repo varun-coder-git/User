@@ -16,7 +16,7 @@ this.getDataFromAPI();
 
 getDataFromAPI(){
   this.JSONPlaceHolder.getData().subscribe((data)=>{
-    this.rslt=()data;
+    this.rslt=data;
     //console.log(data);
   })
 }
