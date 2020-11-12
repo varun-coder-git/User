@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-import { UserDetail } from 'src/userdetail';
+
 import {JSONPlaceHolderService} from './services/jsonplace-holder.service';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';

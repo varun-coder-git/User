@@ -1,11 +1,10 @@
 import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-import { UserDetail } from 'src/userdetail';
-import {JSONPlaceHolderService} from './services/jsonplace-holder.service';
+
+import {JSONPlaceHolderService} from '../services/jsonplace-holder.service';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 
-import {MatTableDataSource} from '@angular/material/table';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -21,13 +20,16 @@ displayedColumns: string[] = ['id', 'name', 'email'];
   @ViewChild(MatSort) sort: MatSort;
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    //this.dataSource.paginator = this.paginator;
+    //this.dataSource.sort = this.sort;
   }
 constructor(private JSONPlaceHolder:JSONPlaceHolderService){
 this.rslt=new Array<any>();
 this.getDataFromAPI();
 }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 getDataFromAPI(){
   this.JSONPlaceHolder.getData().subscribe((data)=>{
