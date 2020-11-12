@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
+import { UserDetail } from 'src/userdetail';
 import {JSONPlaceHolderService} from './services/jsonplace-holder.service';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,19 +11,6 @@ import {JSONPlaceHolderService} from './services/jsonplace-holder.service';
 })
 export class AppComponent {
 
-  rslt:Array<any>;
-  
-constructor(private JSONPlaceHolder:JSONPlaceHolderService){
-this.rslt=new Array<any>();
-this.getDataFromAPI();
-}
 
-getDataFromAPI(){
-  this.JSONPlaceHolder.getData().subscribe((data)=>{
-    this.rslt=data;
-    //console.log(data);
-  })
-}
 
-displayedColumns: string[] = ['id', 'name'];
 }
