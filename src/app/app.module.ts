@@ -7,6 +7,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {MaterialModule} from './material/material.module';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { JSONPlaceHolderService } from './services/jsonplace-holder.service';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +20,10 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [JSONPlaceHolderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

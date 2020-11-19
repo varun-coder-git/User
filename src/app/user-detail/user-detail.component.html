@@ -1,1 +1,36 @@
-<p>user-detail works!</p>
+
+<!-- 
+  <button mat-button [matMenuTriggerFor]="menu">User</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>User Add</button>
+    <button mat-menu-item>User Update</button>
+    <button mat-menu-item>User delete</button>
+  </mat-menu>
+  
+  <div class="container">
+  
+      <span class="fill-remaining-space"></span>
+     <span><mat-toolbar>Angular</mat-toolbar></span>
+     <span class="fill-remaining-space"></span>
+  </div> -->
+
+  <form [formGroup]="service.form" class="normal-form">
+    <mat-grid-list cols="2" rowHeight="300px">
+      <mat-grid-tile>
+
+        <div class="controles-container">
+
+          <input type="hidden" formControlName="$key">
+          <mat-form-field>
+            <input formControlName="name" matInput placeholder="Name">
+
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>2</mat-grid-tile>
+     
+    </mat-grid-list>
+    
+
+  </form>
+

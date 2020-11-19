@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-
+import { FormBuilder, Validators } from "@angular/forms";
 import {JSONPlaceHolderService} from './services/jsonplace-holder.service';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
@@ -11,6 +11,7 @@ import {MatSort} from '@angular/material/sort';
 })
 export class AppComponent {
 
-
+  constructor(private formBuilder: FormBuilder) {}
+}
 
 }
