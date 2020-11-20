@@ -1,45 +1,24 @@
-section {
-    display: table;
-  }
-  
-  .example-label {
-    display: table-cell;
-    font-size: 14px;
-    margin-left: 8px;
-    min-width: 120px;
-  }
-  
-  .example-button-row {
-    display: table-cell;
-    width: 490px;
-  }
-  
-  .example-button-row .mat-button-base {
-    margin: 8px 8px 8px 0;
-  }
-  
-  .example-flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .example-button-container {
-    display: flex;
-    justify-content: center;
-    width: 120px;
-  }
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
 
+.container {
+  padding: 10px;
+}
 
-  mat-grid-tile {
-    background: lightblue;
-  }
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
 
-  .controles-container{
-    width:100%;
-    padding:5%
-  }
+.form-element {
+  padding: 5px 0px 25px 2px;
+  width: 100%;
+}
 
-  .mat-radio-button ~ .mat-radio-button {
-    margin-left: 16px;
-  }
+.button {
+  width: 100%;
+}
