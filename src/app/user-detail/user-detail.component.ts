@@ -12,7 +12,7 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private JSONPlaceHolder: JSONPlaceHolderService,
     private formBuilder: FormBuilder
-  ) { }
+  ) {   }
 
   formGroup: FormGroup;
   titleAlert: string = 'This field is required';

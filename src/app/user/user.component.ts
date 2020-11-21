@@ -24,6 +24,7 @@ export class UserComponent implements OnInit {
     
   }
 constructor(private JSONPlaceHolder:JSONPlaceHolderService){
+ 
 this.rslt=new Array<any>();
 this.getDataFromAPI();
 }
@@ -43,3 +44,4 @@ getDataFromAPI(){
 }
 
 }
+
