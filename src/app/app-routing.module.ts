@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { UserDetailModule } from './user-detail/user-detail.module';
+import { UserComponent } from './user/user.component';
+import { UserModule } from './user/user.module';
 
 
 const routes: Routes = [
-  
-{path:'user', loadChildren:'./user/user.module#UserModule'},
-{path:'user-detail', loadChildren:'./user-detail/user-detail.module#UserDetailModule'},
+
+  { path: 'user', loadChildren: () => UserModule },
+  { path: 'user-detail', loadChildren: () => UserDetailModule }
 
 ];
 
@@ -14,5 +16,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
-
+export class AppRoutingModule { }

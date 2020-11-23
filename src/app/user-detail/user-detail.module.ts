@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { UserDetailRoutingModule } from './user-detail-routing.module';
 import { UserDetailComponent } from './user-detail.component';
+import { MaterialModule } from '../material/material.module';
+
 
 
 @NgModule({
-  declarations: [UserDetailComponent],
   imports: [
     CommonModule,
-  ]
+    UserDetailRoutingModule,
+    MaterialModule
+  ],
+  declarations: [UserDetailComponent]
 })
-export class UserDetailModule { 
-  constructor(){
-    console.log("user-detail module loaded");
-  }
-
-}
+export class UserDetailModule { }
