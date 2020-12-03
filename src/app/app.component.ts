@@ -9,9 +9,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import {MatDialog, MatDialogConfig,MatDialogRef} from "@angular/material/dialog";
 
-interface DialogData {
-  email: string;
-}
+
 
 @Component({
   selector: 'app-root',
@@ -21,7 +19,7 @@ interface DialogData {
 export class AppComponent {
 
   //constructor(private formBuilder: FormBuilder) {}
-  email: string;
+
 
   constructor(public dialog: MatDialog) {}
 

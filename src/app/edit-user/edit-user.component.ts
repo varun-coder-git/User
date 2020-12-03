@@ -33,6 +33,6 @@ export class EditUserComponent implements OnInit {
     }
 
     this.userService.onAdd(user);
-    this.router.navigateByUrl('');
+   this.router.navigateByUrl('');
   }
 }

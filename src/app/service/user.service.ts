@@ -6,54 +6,58 @@ import { User } from '../models/user.model';
 })
 export class UserService {
 
-  users: User[]=[
+  users: User[]=[ {
+    "id": 1,
+    "name": "joy",
+    "email": "joy@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "joy 2",
+    "email": "joy2@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "joy 3",
+    "email": "joy3@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "joy 4",
+    "email": "joy4@gmail.com"
+  },
+  {
+    "id": 5,
+    "name": "joy 5",
+    "email": "joy5@gmail.com"
+  },
+  {
+    "id": 6,
+    "name": "joy 6",
+    "email": "joy6@gmail.com"
+  }
 
-    {
-      "id": 1,
-      "name": "joy",
-      "email": "joy@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "joy 2",
-      "email": "joy2@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "joy 3",
-      "email": "joy3@gmail.com"
-    },
-    {
-      "id": 4,
-      "name": "joy 4",
-      "email": "joy4@gmail.com"
-    },
-    {
-      "id": 5,
-      "name": "joy 5",
-      "email": "joy5@gmail.com"
-    },
-    {
-      "id": 6,
-      "name": "joy 6",
-      "email": "joy6@gmail.com"
-    }
+   
   ];
-  constructor(private userService:UserService) { }
+  constructor() { }
 
   onGet()  {
   return this.users;
   }
 
+
+
   onAdd(user:User){
     this.users.push(user);
   }
-}
 
-  /*onDelete(id:Number){
+   onDelete(id:Number){
    let user=this.users.find(x=>x.id===id);
    let index=this.users.indexOf(user,0);
    this.users.splice(index,1);
-   }*/
+   }
+}
+
+ 
 
 

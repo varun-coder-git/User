@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'user-detail', loadChildren: () => UserDetailModule },
   {path:'user-list',component:UserListComponent},
   {path:'edit-user',component:EditUserComponent},
+
 ];
 
 @NgModule({

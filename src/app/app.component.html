@@ -1,27 +1,18 @@
-
-
 <mat-toolbar color="primary">
   <span class="fill-remaining-space">My Reactive Form with Material</span>
 </mat-toolbar>
 
-  <section>
-   
-    <div class="example-button-row">
-        <a mat-raised-button routerLink="/home">Home</a>
-         <div>
+<section>
 
-          <button mat-raised-button (click)="onCreate()">Add User</button>
-    
-      
-    </div> 
-    
-        <a mat-raised-button routerLink="/user">User Component</a>
-        <a mat-raised-button routerLink="/user-detail">User-detail Component</a>
-        <a mat-raised-button routerLink="/user-list">User-List Component</a>
-        <a mat-raised-button routerLink="/edit-user">Edit-User Component</a>
+  <div class="example-button-row">
+    <a mat-raised-button routerLink="/home">Home</a>
+    <div>
+      <button mat-raised-button (click)="onCreate()">Add User</button>
     </div>
-  </section> 
-
-  
+    <a mat-raised-button routerLink="/user">User Component</a>
+    <a mat-raised-button routerLink="/user-detail">User-detail Component</a>
+    <a mat-raised-button routerLink="/user-list">User-List Component</a>
+    <a mat-raised-button routerLink="/edit-user">Edit-User Component</a>
+  </div>
+</section>
 <router-outlet></router-outlet>
-
