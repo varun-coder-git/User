@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h2>List of Users</h2>
+    <table class="table" border=1>
+
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Delete</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>
+                    <div class="example-button-container">
+                        <button mat-fab color="primary"> <!--(click)="onDelete(user.id)"> -->
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div><br>
+    <div class="example-button-container">
+        <button mat-raised-button color="primary" class="button">+Add</button>
+    </div>
+
+
+   

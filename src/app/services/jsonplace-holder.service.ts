@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +13,16 @@ export class JSONPlaceHolderService {
   form: FormGroup = new FormGroup({
 
   $key: new FormControl(null),
-  name: new FormControl(''),
-  email: new FormControl(''),
+  id: new FormControl('',Validators.required),
+  name: new FormControl('',Validators.required),
+  email: new FormControl('',[Validators.required,Validators.email]),
   gender: new FormControl('1'),
   status: new FormControl('1'),
   created_at: new FormControl(''),
   updated_at: new FormControl(''),
   });
+
+  
   getData():Observable<any>{
 
   const url="https://gorest.co.in/public-api/users";  

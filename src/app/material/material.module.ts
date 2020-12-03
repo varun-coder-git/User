@@ -7,7 +7,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {MatRadioModule} from '@angular/material/radio'
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSortModule} from '@angular/material/sort';
+import {MatIconModule} from '@angular/material/icon';
 const MaterialComponents=[
   
   MatTableModule,
@@ -18,8 +23,12 @@ const MaterialComponents=[
   MatGridListModule,
   MatFormFieldModule,
   MatInputModule,
-  MatRadioModule
-
+  MatRadioModule,
+  MatDialogModule,
+  MatDatepickerModule,
+ MatNativeDateModule,
+ MatSortModule,
+ MatIconModule
 ];
 @NgModule({
  

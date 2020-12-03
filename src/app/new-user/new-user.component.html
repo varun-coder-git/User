@@ -1,0 +1,55 @@
+<br>
+
+  <h2 mat-dialog-title>{{title}}</h2>
+  <div mat-dialog-content>
+  <form [formGroup]="service.form" class="form">
+    <div class="container">
+      <input type="hidden" formControlName="$key">
+    </div>
+        <mat-form-field class="example-full-width">
+          <mat-label>ID</mat-label>
+          <input matInput placeholder="ID" formControlName="id">
+          <mat-error>This field is mandatory</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" >
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" formControlName="name">
+            <mat-error>This field is mandatory</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" >
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="mail" formControlName="email">
+            <mat-error>Email should be valid!!</mat-error>
+          </mat-form-field>
+        
+          <mat-radio-group aria-label="Select an option"  formControlName="gender">
+            <mat-label>Select Gender</mat-label><br><br>
+            <mat-radio-button value="1" >Male</mat-radio-button>
+            <mat-radio-button value="2" >Female</mat-radio-button>
+          </mat-radio-group>
+<br><br>
+          <mat-radio-group aria-label="Select an option" formControlName="status">
+            <mat-label>Select Status</mat-label>
+            <mat-radio-button value="1" >Active</mat-radio-button>
+            <mat-radio-button value="2">Inactive</mat-radio-button>
+          </mat-radio-group>
+          <br/>
+          <mat-form-field formControlName="ID">
+            <mat-label>Created at</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="created_at">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> 
+ <br/>
+          <mat-form-field >
+            <mat-label>Updated at</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="updated_at">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> 
+        </form></div>
+  <br>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onNoClick()">Submit</button>
+    <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+  </mat-dialog-actions>

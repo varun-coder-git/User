@@ -9,10 +9,16 @@ import {MaterialModule} from './material/material.module';
 
 import { JSONPlaceHolderService } from './services/jsonplace-holder.service';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { NewUserComponent } from './new-user/new-user.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NewUserComponent,
+    UserListComponent,
+    EditUserComponent,
  
   ],
   imports: [

@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-toolbar color="primary">
+      <span class="fill-remaining-space">Add User</span>
+    </mat-toolbar>
+    </div>
+    <div class="container"> 
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit(f)" class="form" #f="ngForm">
+        <mat-form-field class="form-element">
+            <input matInput placeholder="ID" formControlName="id" ngModel name="id">
+            <mat-error>This field is mandatory</mat-error>
+          </mat-form-field>
+        <mat-form-field class="form-element">
+            <input matInput placeholder="Name" formControlName="name" ngModel name="name">
+            <mat-error>This field is mandatory</mat-error>
+          </mat-form-field>
+
+        <mat-form-field class="form-element">
+          <input matInput placeholder="Emailaddress" formControlName="email" ngModel name="email">
+          <mat-error>Enter Valid Email!!</mat-error>
+        </mat-form-field>
+    
+          
+        <div class="form-element">
+          <button mat-raised-button color="primary" type="submit" class="button" >Submit Form</button>
+        </div>
+    
+      </form>
+    </div>
+
+   
