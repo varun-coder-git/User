@@ -1,12 +1,13 @@
 <div class="container mt-5">
     <h2>List of Users</h2>
-    <table class="table" border=1>
+    <table class="table" border=1 cellpadding=10>
 
         <thead>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Delete</th>
+            <th>Edit</th>
         </thead>
 
         <tbody>
@@ -16,9 +17,14 @@
                 <td>{{user.email}}</td>
                 <td>
                     <div class="example-button-container">
-                        <button mat-fab color="primary">
+                        <button mat-fab color="primary" (click)="onDelete(user.id)">
                             <mat-icon>delete</mat-icon>
                         </button>
+                    </div>
+                </td>
+                <td >
+                    <div class="example-button-container">
+                        <button mat-raised-button color="primary"  [routerLink]="['/edit',user.id]"  class="button" width=200px>Edit</button>
                     </div>
                 </td>
             </tr>
@@ -26,7 +32,8 @@
     </table>
     <div><br>
         <div class="example-button-container">
-            <button mat-raised-button color="primary" class="button">+Add</button>
+            <button mat-raised-button color="primary" class="button" routerLink="/add/0">+Add</button>
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>

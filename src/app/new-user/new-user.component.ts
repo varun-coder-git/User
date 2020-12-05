@@ -17,8 +17,21 @@ export class NewUserComponent implements OnInit {
   public title="Add New User Form";
   ngOnInit(): void {
   }
-  constructor(private  dialogRef:  MatDialogRef<NewUserComponent>, @Inject(MAT_DIALOG_DATA) public  data:  any,private service:JSONPlaceHolderService) {
+  constructor(private formBuilder: FormBuilder,private  dialogRef:  MatDialogRef<NewUserComponent>, @Inject(MAT_DIALOG_DATA) public  data:  any,private service:JSONPlaceHolderService) {
   }
+
+  formGrp: FormGroup = new FormGroup({
+
+    $key: new FormControl(null),
+    id: new FormControl('',Validators.required),
+    name: new FormControl('',Validators.required),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    gender: new FormControl('1'),
+    status: new FormControl('1'),
+    created_at: new FormControl(''),
+    updated_at: new FormControl(''),
+    });
+  
   onNoClick(): void {
     this.dialogRef.close();
   }
@@ -26,6 +39,6 @@ export class NewUserComponent implements OnInit {
 
   onClear(): void{
 
-    this.service.form.reset();
+    this.formGrp.reset();
   }
 }

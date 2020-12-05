@@ -36,16 +36,12 @@ export class UserService {
     "name": "joy 6",
     "email": "joy6@gmail.com"
   }
-
-   
   ];
   constructor() { }
 
   onGet()  {
   return this.users;
   }
-
-
 
   onAdd(user:User){
     this.users.push(user);
@@ -56,6 +52,19 @@ export class UserService {
    let index=this.users.indexOf(user,0);
    this.users.splice(index,1);
    }
+   
+   onEdit(user:User){
+    let oldUser=this.users.find(x=>x.id===user.id);
+    oldUser.name=user.name;
+    oldUser.email=user.email;
+    oldUser.id=user.id;
+
+
+   }
+   onGetUser(id:Number){
+      return this.users.find(x=>x.id===id);
+   }
+  
 }
 
  

@@ -19,5 +19,7 @@ export class UserListComponent implements OnInit {
    onDelete(id:Number){
    this.userService.onDelete(id);
   }
+
+  
 }
  

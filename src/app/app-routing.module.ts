@@ -8,11 +8,13 @@ import { UserListComponent } from './user-list/user-list.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 
 const routes: Routes = [
- 
+
   { path: 'user', loadChildren: () => UserModule },
   { path: 'user-detail', loadChildren: () => UserDetailModule },
-  {path:'user-list',component:UserListComponent},
-  {path:'edit-user',component:EditUserComponent},
+  { path: 'user-list', component: UserListComponent },
+  { path: 'edit-user', component: EditUserComponent },
+  { path: 'add/:id', component: EditUserComponent },
+  { path: 'edit/:id', component: EditUserComponent },
 
 ];
 
