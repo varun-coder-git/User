@@ -1,0 +1,28 @@
+
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space">My First ANGULAR application </span>
+  </mat-toolbar>
+  
+  <section>
+  
+    <div class="example-button-row">
+      <a mat-raised-button routerLink="/home">Home</a>
+    <!-- <button mat-raised-button (click)="onCreate()">Add User</button> -->
+      <a mat-raised-button routerLink="/user">User Component</a>
+      <a mat-raised-button routerLink="/user-detail">User-detail Component</a>
+      <a mat-raised-button routerLink="/user-list">User-List Component</a>
+      <a mat-raised-button routerLink="/edit-user">Edit-User Component</a>
+      
+     
+    </div>
+  </section>
+  
+<h1>Hi {{currentUser.firstName}}!</h1>
+
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
